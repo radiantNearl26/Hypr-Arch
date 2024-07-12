@@ -1,29 +1,33 @@
-# Welcome to my dotfiles!
+<h1 style="text-align: center;">Hypr-Dots - A Super-charged Arch-Hyprland Setup</h1>
 
 This repository contains my personal dotfiles, which are configuration files for various tools and applications on my system. These files are used to customize my workflow, shell, and other aspects of my computing environment.
 
 ## What's included?
 
-- [] **`.bashrc`**: My bash shell configuration file, which sets up my command prompt, aliases, and other shell settings.
-- [] **`nvim.lua`**: My NVim editor configuration file, which customizes my Vim experience with plugins, keybindings, and more.
-- [] **`.gitconfig`**: My Git configuration file, which sets up my Git username, email, and other preferences.
-- [] **`.zshrc`**: My Zsh shell configuration file, which sets up my command prompt, aliases, and other shell settings (for systems where I use Zsh).
+1. .bashrc`: My bash shell configuration file, which sets up my command prompt, aliases, and other shell settings.
 
-### How to use these dotfiles
+2. `nvim.lua: My NVim editor configuration file, which customizes my Vim experience with plugins, keybindings, and more.
+
+3. `.gitconfig: My Git configuration file, which sets up my Git username, email, and other preferences.
+
+4. `.zshrc: My Zsh shell configuration file, which sets up my command prompt, aliases, and other shell settings (for systems where I use Zsh).
+
+## How to use these dotfiles
 If you're interested in using these dotfiles, you can clone this repository and then create symbolic links to the files in your home directory. For example:
 
-```bash
+```zsh
 git clone https://github.com/your-username/dotfiles.git
 cd dotfiles
 ```
+Then, you copy the config you like in your $XDG-CONFIG-DIR/.config folder. Have fun tweaking the configs.
 
-### Note
+## Note
 Be careful when using someone else's dotfiles, as they may contain customizations that are specific to their system or workflow. Make sure to review the files carefully before using them.
 
-### License
+## License
 These dotfiles are released under the MIT License. See the `LICENSE` file for details.
 
-### Contributing
+## Contributing
 If you'd like to contribute to these dotfiles, please feel free to submit a pull request or open an issue to discuss changes.
 
 ## Installation
@@ -38,18 +42,7 @@ Tell people where they can go to for help. It can be any combination of an issue
 ## Roadmap
 If you have ideas for releases in the future, it is a good idea to list them in the README.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
 You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
