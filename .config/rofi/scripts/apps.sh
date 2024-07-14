@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
+## True Owner:
+# Author : Aditya Shakya (adi1090x)
+# Github : @adi1090x
 #
-## Applets : Favorite Applications
+## Modified by:
+# Author : Asmit Das Choudhury (radiantNearl26)
+# Git : @radiantNearl26
+#
+## Applets : Run Applications as User.
 
 ## Import Current Theme
-# theme="~/.config/rofi/styles/applets.rasi"
-# alt="NO"
-
-## Import Current Theme (alt)
 theme="~/.config/rofi/styles/applets.rasi"
 alt="NO"
 

@@ -1,11 +1,15 @@
 /**
  *
+ * True Owner:
  * Author : Aditya Shakya (adi1090x)
  * Github : @adi1090x
  * 
- * Colors
+ * Modified by:
+ * Author : Asmit Das Choudhury (radiantNearl26)
+ * Git : @radiantNearl26
+ *
+ * Colors : Navy
  **/
-
 * {
     background:     #021B21FF;
     background-alt: #0C252BFF;

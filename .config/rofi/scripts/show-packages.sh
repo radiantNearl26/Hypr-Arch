@@ -1,21 +1,25 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
+## True Owner:
+# Author : Aditya Shakya (adi1090x)
+# Github : @adi1090x
+#
+## Modified by:
+# Author : Asmit Das Choudhury (radiantNearl26)
+# Git : @radiantNearl26
 #
 ## Applets : Favorite Applications
 
 # Import Current Theme
-source "$HOME"/.config/rofi/applets/shared/theme.bash
-theme="$type/$style"
+theme="~/.config/rofi/styles/applets.rasi"
 
 # Theme Elements
-prompt='Applications'
-mesg="Installed Packages : `pacman -Q | wc -l` (pacman)"
+prompt='Overview'
+mesg="Installed Packages : `pacman -Q | wc -l` (pacman) \
+	Installed Dependencies: 476"
 
 # Rofi CMD
-rofi -theme-str 'textbox-prompt-colon {str: "";}' \
-	-dmenu \
+rofi -dmenu \
 	-p "$prompt" \
 	-mesg "$mesg" \
 	-markup-rows \

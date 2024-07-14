@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
+## True Owner:
+# Author : Aditya Shakya (adi1090x)
+# Github : @adi1090x
+#
+## Modified by:
+# Author : Asmit Das Choudhury (radiantNearl26)
+# Git : @radiantNearl26
 #
 ## Applets : Volume
 
