@@ -1,0 +1,33 @@
+#  ┏┓┓┏┓ ┏┏┓┓ ┓   ┏┓┏┓┓ ┏┓┳┓ ┏┓┏┓┓┏┏┓┳┳┓┏┓
+#  ┃┃┗┫┃┃┃┣┫┃ ┃   ┃ ┃┃┃ ┃┃┣┫-┗┓┃ ┣┫┣ ┃┃┃┣ 
+#  ┣┛┗┛┗┻┛┛┗┗┛┗┛  ┗┛┗┛┗┛┗┛┛┗ ┗┛┗┛┛┗┗┛┛ ┗┗┛
+# INFO: Colorscheme generated using suzume-light wallpaper.
+
+{
+    "wallpaper": "/home/Asmit/Pictures/Wallpapers/1309651.jpg", 
+    "alpha": "100",
+
+    "special": {
+        "background": "#151721",
+        "foreground": "#e0d3d9",
+        "cursor": "#e0d3d9"
+    },
+    "colors": {
+        "color0": "#151721",
+        "color1": "#7B9BC2",
+        "color2": "#A09AB0",
+        "color3": "#CFAFAF",
+        "color4": "#D9ACA6",
+        "color5": "#EBCBB2",
+        "color6": "#A2A9C7",
+        "color7": "#e0d3d9",
+        "color8": "#9c9397",
+        "color9": "#7B9BC2",
+        "color10": "#A09AB0",
+        "color11": "#CFAFAF",
+        "color12": "#D9ACA6",
+        "color13": "#EBCBB2",
+        "color14": "#A2A9C7",
+        "color15": "#e0d3d9"
+    }
+}
