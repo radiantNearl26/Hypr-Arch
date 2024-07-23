@@ -6,7 +6,8 @@ alias nv="nvim"
 alias nm="nmtui"
 alias ct="cointop"
 alias cl="clear && colorscript -e "elfman""
-alias ex="exit"
+alias q="exit"
+alias pk="pkill -e"
 
 #
 # Git Commands
