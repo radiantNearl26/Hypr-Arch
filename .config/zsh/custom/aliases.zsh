@@ -8,6 +8,7 @@ alias ct="cointop"
 alias cl="clear && colorscript -e "elfman""
 alias q="exit"
 alias pk="pkill -e"
+alias hypr="Hyprland"
 
 #
 # Git Commands
