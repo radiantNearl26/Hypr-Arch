@@ -17,6 +17,10 @@ export ZCUSDIR="$HOME/.config/zsh/custom"
 #-----------------------------------#
 export ALIASFILE="$ZCUSDIR/aliases.zsh"
 # export ENVFILE="$ZCUSDIR/variables.zsh"
+export COMPFILE="$ZCUSDIR/completion.zsh"
+export THEMESFILE="$ZCUSDIR/theming.zsh"
+export BINDSFILE="$ZCUSDIR/keybinds.zsh"
+# export HISTFILE="$ZCUSDIR/history.zsh"
 
 # app config directories
 export NVIMDIR="~/.config/nvim/"
@@ -32,18 +36,19 @@ export ARCHFLAGS="-arch x86_64"
 export SUDO_PROMPT=' Enter Password: '
 
 # Directory for system directories
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_DIR="$HOME/.config"
+export XDG_CACHE_DIR="$HOME/.cache"
 
 # Directory for compinit cache
-export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
+export ZSH_CACHE_DIR="$XDG_CACHE_DIR/zsh"
 export ZSH_COMPDUMP="$ZDOTDIR/zsh-compdump/.zcompdump"
 
 # Default apps
 export EDITOR="nvim"
 export BROWSER="ungoogled-chromium-bin"
+# export BROWSER="librewolf-bin" # INFO: Disabled due to stability issues.
 # export PAGER="less"
-export TERMINAL="xfce-terminal" # INFO: alacritty config build in progress
+export TERMINAL="xfce-terminal" # INFO: alacritty config build in progress.
 
 # Default language and locale
 export LANG="en_US.UTF-8"
