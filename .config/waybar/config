@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "custom/spotify"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "tray", "clock"],
     "hyprland/workspaces": {
         "disable-scroll": false,
         "all-outputs": false,
@@ -27,6 +27,11 @@
     },
     "memory": {
         "format": " {}% "
+    },
+    "backlight": {
+        "device": "acpi_video1",
+        "format": "{icon} {percent}% ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "bat": "BAT0",
