@@ -5,10 +5,16 @@
 alias nv="nvim"
 alias nm="nmtui"
 alias ct="cointop"
-alias cl="clear && colorscript -e "elfman""
+alias cl="clear && colorscript -e "zwaves""
 alias q="exit"
 alias pk="pkill -e"
 alias hypr="Hyprland"
+alias ff="fastfetch"
+alias rb="reboot"
+alias pb="halt --poweroff"
+
+alias launch="hyprctl dispatch exec"
+alias pkill="pkill -e"
 
 #
 # Dotfiles (git) Commands
