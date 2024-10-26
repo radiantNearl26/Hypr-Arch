@@ -1,0 +1,61 @@
+# Import your colorschemes config file: 
+import = [ "~/.config/alacritty/colors.toml" ]
+
+[cursor.style]
+shape = "Block"
+blinking = "On"
+
+[env]
+TERM = "alacritty"
+
+[font]
+# Set the point size
+size = 12
+
+[font.normal]
+family = "BlexMono Nerd Font Mono"
+style = "Regular"
+
+[font.italic]
+family = "BlexMono Nerd Font Mono"
+style = "Italic"
+
+[font.bold]
+family = "BlexMono Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "BlexMono Nerd Font Mono"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 1000
+multiplier = 3
+
+[window]
+dynamic_padding = true
+decorations = "Full"
+opacity = 1.0
+startup_mode = "Windowed"
+dynamic_title = true
+
+[window.padding]
+x = 25
+y = 25
+
+[bell]
+animation = "Linear"
+duration = 500
+color = "#c0caf5"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
