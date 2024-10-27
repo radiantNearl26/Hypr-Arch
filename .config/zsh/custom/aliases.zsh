@@ -33,6 +33,7 @@ alias dpush='dot push -u origin main'
 alias drh='dot reset HEAD'
 alias dmv='dot mv'
 alias dcout='dot checkout --'
+alias ddiff='dot diff'
 
 alias drs='dot restore --staged'
 alias dr='dot restore --'
