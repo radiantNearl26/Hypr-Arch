@@ -1,4 +1,4 @@
-# Import your colorschemes config file: 
+[general]
 import = [ "~/.config/alacritty/colors.toml" ]
 
 [cursor.style]
