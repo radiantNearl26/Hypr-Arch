@@ -7,9 +7,6 @@ autoload -Uz compinit
 precmd_functions=""
 compinit
 
-# Enable oh-my-posh prompt
-eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/base.json)"
-
 # Source custom configuration files
 source $ZDOTDIR/custom/variables.zsh
 source $ZDOTDIR/custom/completion.zsh
@@ -23,9 +20,13 @@ plugins=(alias-finder aliases archlinux history git npm zsh-autosuggestions zsh-
 zstyle ':omz:plugins:alias-finder' autoload yes
 source $HOME/.config/zsh/ohmyzsh/oh-my-zsh.sh
 
+# Enable oh-my-posh prompt
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/base.json)"
+
 # Help command
 autoload -Uz run-help run-help-git run-help-ip run-help-openssl run-help-p4 run-help-sudo run-help-svk run-help-svn
 (( ${+aliases[run-help]} )) && unalias run-help
 alias help=run-help
 
+# INIT Display for console:
 cl
