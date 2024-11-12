@@ -5,8 +5,8 @@
     "grab-mouse-pointer": true,
     "hotkey-show-app": "Super_L",
     "render-on-screen": "mouse-pointer-monitor",
-    "show-indicator-icon": true,
+    "show-indicator-icon": false,
     "show-recent-apps": "5",
-    "terminal-command": "xfce4-terminal",
+    "terminal-command": "alacritty",
     "theme-name": "darkblue-ice"
 }
