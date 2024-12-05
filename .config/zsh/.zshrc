@@ -30,3 +30,4 @@ alias help=run-help
 
 # INIT Display for console:
 cl
+export PATH=$PATH:/home/Asmit/.spicetify
