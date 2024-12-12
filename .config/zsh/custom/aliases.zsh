@@ -20,7 +20,7 @@ alias pkill="pkill -e"
 # Dotfiles (git) Commands
 #
 
-alias dot='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias dot='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias dcom='dot commit -m'
 alias damend='dot commit --amend'
 alias dadd='dot add'
@@ -51,7 +51,7 @@ alias ddir='ls --group-directories-first --color=auto -d $(dot ls-tree -dr $(dot
 # Startpage (git) Commands
 #
 
-alias start='/usr/bin/git --git-dir="$HOME/.startfiles/" --work-tree="$HOME/.config/startpage/"'
+alias start='git --git-dir="$HOME/.startfiles/" --work-tree="$HOME/.config/startpage/"'
 alias scom='start commit -m'
 alias samend='start commit --amend'
 alias sadd='start add'
