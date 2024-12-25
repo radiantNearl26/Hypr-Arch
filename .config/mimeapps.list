@@ -156,7 +156,7 @@ application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 application/x-ms-dos-executable=wine.desktop
 application/x-theme=org.xfce.mousepad.desktop
-application/pdf=org.gnome.Evince.desktop
+application/pdf=okularApplication_pdf.desktop
 x-scheme-handler/figma=figma-linux.desktop
 application/xml=nvim.desktop
 application/json=nvim.desktop
@@ -315,13 +315,11 @@ application/vnd.rar=org.gnome.FileRoller.desktop;
 application/x-desktop=panel-desktop-handler.desktop;
 application/x-ms-dos-executable=wine.desktop;
 application/x-theme=org.xfce.mousepad.desktop;
-application/pdf=org.gnome.Evince.desktop;
+application/pdf=org.gnome.Evince.desktop;okularApplication_pdf.desktop;
 text/x-python=userapp-idle-MO4NF2.desktop;
 application/xml=nvim.desktop;
 application/json=nvim.desktop;
 application/vnd.ms-publisher=nvim.desktop;org.xfce.mousepad.desktop;
 text/x-csrc=nvim.desktop;
 application/x-shellscript=nvim.desktop;
-
-[Removed Associations]
-text/plain=userapp-nvim-T23BQ2.desktop;
+text/plain=nvim.desktop;
