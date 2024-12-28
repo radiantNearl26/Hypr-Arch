@@ -3839,7 +3839,7 @@ aout=any
 #role=video
 
 # Audio filters (string)
-audio-filter=equalizer
+#audio-filter=
 
 # Audio visualizations (string)
 #audio-visual=none
