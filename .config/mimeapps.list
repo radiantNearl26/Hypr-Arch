@@ -164,6 +164,7 @@ application/vnd.ms-publisher=org.xfce.mousepad.desktop
 text/x-csrc=nvim.desktop
 application/x-shellscript=org.gnome.TextEditor.desktop
 text/css=org.gnome.TextEditor.desktop
+application/zip=org.gnome.FileRoller.desktop
 
 [Added Associations]
 audio/ogg=vlc.desktop;
@@ -286,7 +287,7 @@ image/png=org.xfce.ristretto.desktop;org.gnome.eog.desktop;
 image/jpeg=org.xfce.ristretto.desktop;
 inode/directory=xfce4-file-manager.desktop;
 x-scheme-handler/trash=xfce4-file-manager.desktop;
-application/zip=org.gnome.Nautilus.desktop;
+application/zip=org.gnome.FileRoller.desktop;
 image/bmp=org.gnome.eog.desktop;
 image/gif=org.gnome.eog.desktop;
 image/jpg=org.gnome.eog.desktop;
