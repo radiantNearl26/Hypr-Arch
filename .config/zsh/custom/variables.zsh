@@ -45,8 +45,8 @@ export ZSH_COMPDUMP="$ZDOTDIR/zsh-compdump/.zcompdump"
 
 # Default apps
 export EDITOR="nvim"
-export BROWSER="ungoogled-chromium-bin"
-# export BROWSER="librewolf-bin" # INFO: Disabled due to stability issues.
+# export BROWSER="ungoogled-chromium-bin" # INFO: Disabled due to stability issues.
+export BROWSER="librewolf-bin" 
 # export PAGER="less"
 export TERMINAL="xfce-terminal" # INFO: alacritty config build in progress.
 
