@@ -136,7 +136,7 @@ tooltip label {
 }
 
 #clock {
-  padding: 0px 0px;
+  padding: 0px 5px 0px 0px;
 
   margin: 0px 2px 4px 4px;
 
@@ -149,7 +149,7 @@ tooltip label {
   background: alpha(@main-color, 0);
   color: @main-color;
   border-radius: 10px;
-  margin: 0px 5px 0px 0px;
+  margin: 0px 0px 0px 0px;
 
 }
 

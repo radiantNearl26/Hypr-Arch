@@ -1,50 +1,50 @@
 {
-  "hyprland/window": {
-    "format": "󰣆 {title}",
-    "max-length": 80,
-    "separate-outputs": false,
-    "rewrite": {
-      "^.*( — Zen Browser|Zen Browser)$": "󰈹 Zen",
-      "^.*( — Firefox|Firefox)$": "󰈹 Firefox",
-      "^.*( — Chromium|Chromium)$": "󰈹 Chromium",
-      "^.*v( .*|$)": " Neovim",
-      "^.*~$": "󰄛 Kitty",
-      "^.*(- Spotify|Spotify)$": "󰏤 Spotify",
-      "^.*(- Code|Code)$": "󰈹 VSCode",
-      "(.*) ": " Empty"
-
-    }
+  //Others - Important
+  "custom/arrow-left": {
+    "format": "󰁒",
+    "tooltip": false
   },
-  "group/info": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "transition-right-to-left": true
-    },
-    "modules": ["custom/arrow-left", "custom/playerlabel", "custom/updates"]
-  },
+  
   "custom/arrow-right": {
     "format": "󰁙",
     "tooltip": false
   },
-  "cpu": {
-    "format": "󰘚 {usage}󱉸"
+
+
+  // Top Bar - modules-left
+  "hyprland/window": {
+    "format": "󰣆 {title}",
+    "max-length": 40,
+    "separate-outputs": false,
+    "rewrite": {
+      "^.*( — LibreWolf|LibreWolf)$": "󰈹 LibreWolf",
+      "^.*( — Chromium|Chromium)$": "󰈹 Chromium",
+      "(.*) ": " Empty"
+    }
   },
-  "memory": {
-    "format": " {:2}󱉸"
+  
+  "group/utils": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": true
+    },
+    "modules": ["custom/arrow-right","tray"]
   },
-  "disk": {
-    "interval": 600,
-    "format": "󰆼 {percentage_used}󱉸",
-    "path": "/"
+  "tray": {
+    "spacing": 8
   },
+
+
+  // Top Bar - modules-center
   "custom/updates": {
     "format": "󱧕 {}",
     "tooltip": true,
     "interval": 43200, // 12 hours
-    "exec": "~/.config/hypr/scripts/check_updates.sh",
+    "exec": "~/.scripts/check_updates.sh",
     "return-type": "json"
   },
+  
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
@@ -62,190 +62,7 @@
       "10": "󰙯"
     }
   },
-  "group/control-center": {
-    "orientation": "inherit",
-    "modules": ["group/audio","group/connection"]
-  },
-
-
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 20,
-    "all-outputs": true,
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [
-        "wofi",
-        "rofi",
-        "swaylock"
-    ]
-},
-
-"group/apps": {
-  "orientation": "inherit",
-  "drawer": {
-    "transition-duration": 300,
-    "transition-left-to-right": true
-  },
-  "modules": ["custom/arrow-right","wlr/taskbar", "cpu", "memory", "disk"]
-},
-
-
-  "custom/record": {
-    "format": "",
-    "tooltip": true,
-    "tooltip-format": "Record Screen",
-    "on-click": "bash ~/.config/hypr/scripts/record.sh fullscreen"
-  },
-
-  "custom/stop": {
-    "format": "󰻃",
-    "tooltip": true,
-    "tooltip-format": "Stop Recording",
-    "on-click": "bash ~/.config/hypr/scripts/record.sh stop"
-  },
-
-  "custom/section": {
-    "format": "",
-    "tooltip": true,
-    "tooltip-format": "Record Section",
-    "on-click": "bash ~/.config/hypr/scripts/record.sh section"
-  },
-
-  "group/video": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "transition-left-to-right": false
-    },
-    "modules": ["custom/arrow-left","custom/record", "custom/section", "custom/stop","group/control-center"]
-  },
-
-
-  "group/audio": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "pulseaudio"
-      // "pulseaudio/slider"
-    ]
-  },
-  "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{icon}",
-    "tooltip": false,
-    // "tooltip-format": "{volume}% {icon} | {desc}",
-    "format-muted": "󰖁",
-    "format-icons": {
-      "headphones": "󰋌",
-      "handsfree": "󰋌",
-      "headset": "󰋌",
-      "phone": "",
-      "portable": "",
-      "car": " ",
-      "default": ["󰕿", "󰖀", "󰕾"]
-    },
-    "on-click": "changevolume mute",
-    "on-click-middle": "pavucontrol",
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-    "smooth-scrolling-threshold": 1
-  },
   
-  "group/connection": {
-    "orientation": "inherit",
-    "modules": ["group/bluetooth","group/network"]
-  },
-  "group/network": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 10000,
-      "transition-left-to-right": true
-    },
-    "modules": ["network"]
-
-  },
-  "group/bluetooth": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "transition-left-to-right": true
-    },
-    "modules": ["bluetooth", "bluetooth#status"]
-  },
-  "network": {
-    "format": "{icon} ",
-    "format-icons": {
-      "wifi": ["󰤨"],
-      "ethernet": ["󰈁"],
-      "disconnected": [""]
-    },
-    "format-wifi": "󰤨",
-    "format-ethernet": "󰈁",
-    "format-disconnected": "󰖪",
-    "format-linked": "󰈁",
-    "interval": 5,
-    "tooltip-format": "{ipaddr}",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
-    "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
-    "tooltip-format-disconnected": "Not Connected to any type of Network",
-    "tooltip": true,
-    "on-click": "python ~/.config/rofi/network/network.py"
-  },
-  "network#speed": {
-    "format": " {bandwidthDownBits} ",
-    "interval": 5,
-    "tooltip-format": "{ipaddr}",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
-    "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
-    "tooltip-format-disconnected": "Not Connected to any type of Network",
-    "tooltip": true,
-    "on-click": "python ~/.config/rofi/network/network.py"
-  },
-  "bluetooth": {
-    "format-on": "",
-    "format-off": "󰂲",
-    "format-disabled": "",
-    "format-connected": "",
-    "tooltip": false,
-    // "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    // "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    // "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    // "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "bash ~/.config/rofi/bluetooth/bluetooth.sh"
-  },
-  "bluetooth#status": {
-    "format-on": "",
-    "format-off": "",
-    "format-disabled": "",
-    "format-connected": "<b>{num_connections}</b>",
-    "format-connected-battery": "<small><b>{device_battery_percentage}%</b></small>",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "rofi-bluetooth -config ~/.config/rofi/menu.d/network.rasi -i"
-  },
-  "group/hub": {
-    "orientation": "inherit",
-    "modules": ["group/utils"]
-  },
-  "group/utils": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "transition-left-to-right": true
-    },
-    "modules": ["custom/arrow-right","custom/notifications","custom/weather","tray"]
-  },
-  "custom/arrow-left": {
-    "format": "󰁒",
-    "tooltip": false
-  },
   "custom/notifications": {
     "tooltip": false,
     // I don't know why "{icon} {}" doesn't work
@@ -267,39 +84,36 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
-  "custom/weather": {
-    "format": "{}",
-    "tooltip": true,
-    "interval": 3600,
-    "exec": "wttrbar --custom-indicator '{ICON}{temp_C}°C'",
-    "return-type": "json"
-  },
-  "custom/theme-switcher": {
-    "format": "󰏘",
-    "tooltip": false,
-    "on-click": "~/.config/hypr/scripts/toggle_theme.sh"
-  },
-  "clock": {
-    "format": "{:%H:%M}",
-    "format-alt": "{:%A %d.%m}",
-    "tooltip-format": "<tt><big>{calendar}</big></tt>",
-    "calendar": {
-      "mode": "month",
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
+
+
+  //Top Bar - modules-right
+  "group/video": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false
     },
-    "actions": {
-      "on-click-right": "mode",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
+    "modules": ["custom/arrow-left","custom/record", "custom/section", "custom/stop"]
   },
+  "custom/record": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Record Screen",
+    "on-click": "bash ~/.config/hypr/scripts/record.sh fullscreen"
+  },
+  "custom/stop": {
+    "format": "󰻃",
+    "tooltip": true,
+    "tooltip-format": "Stop Recording",
+    "on-click": "bash ~/.config/hypr/scripts/record.sh stop"
+  },
+  "custom/section": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Record Section",
+    "on-click": "bash ~/.config/hypr/scripts/record.sh section"
+  },
+  
   "group/power": {
     "orientation": "inherit",
     "drawer": {
@@ -314,7 +128,8 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}",
+    "on-click": "cpupower-gui",
+    "format": "{icon} {capacity}%",
     "format-charging": "<b>{icon} </b>",
     "format-full": "<span color='#82A55F'><b>{icon}</b></span>",
     "format-icons": [
@@ -325,39 +140,173 @@
       "󰂂",
       "󰁹"
     ],
-    "tooltip-format": "{timeTo} {capacity} % | {power} W"
+    "tooltip-format": "{timeTo} ~ {capacity}% | {power}Watts"
   },
-
-  "tray": {
-    "spacing": 8
-  },
-
-"custom/playerlabel": {
-    "format": "{}",
-    "return-type": "json",
-    "max-length": 50,
-    "exec": "playerctl -p spotify metadata --format '{\"text\": \"{{artist}} : {{markup_escape(title)}}\", \"tooltip\": \"Spotify : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-    "on-click-middle": "playerctl -p spotify play-pause",
-    "on-click": "playerctl -p spotify previous",
-    "on-click-right": "playerctl -p spotify next",
-    "tooltip": false
-},
-
-"custom/icon": {
-  "format": "󰣇"
-},
-
-
-
-
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
-      "default": "",
-      "balanced": "<span><small></small></span>",
+      "default": "<span color='#a1d4e3'><small></small></span>",
+      "balanced": "<span color='#e3d4a1'><small></small></span>",
       "power-saver": "<span color='#a6e3a1'><small></small></span>"
     }
-  }
+  },
+  
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A %d.%m}",
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
+    "calendar": {
+      "mode": "month",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  
+  //Bottom Bar - modules-left
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "all-outputs": true,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+        "ulauncher",
+        "rofi",
+        "hyprlock",
+        "emote",
+        "smile"
+    ]
+  },
+  
+  
+  // Bottom Bar - modules-center
+  "custom/playerlabel": {
+    "format": "{}",
+    "return-type": "json",
+    "max-length": 50,
+    "exec": "playerctl -p spotify metadata --format '{\"text\": \"{{artist}} : {{markup_escape(title)}}\", \"tooltip\": \"Spotify : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click-middle": "playerctl -p spotify previous",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-click-right": "playerctl -p spotify next",
+    "tooltip": true,
+    "tooltip-format": "Now Playing: {}"
+  },
+  
+  
+  // Bottom Bar - modules-right
+  "group/sys": {
+    "orientation": "inherit",
+    "modules": ["cpu","memory","disk"]
+  },
+  "cpu": {
+    "format": "󰘚 {usage}󱉸",
+    "on-click": "alacritty -e 'htop'"
+  },
+  "memory": {
+    "format": " {:2}󱉸",
+    "on-click": "alacritty -e 'htop'"
+  },
+  "disk": {
+    "interval": 600,
+    "format": "󰆼 {percentage_used}󱉸",
+    "path": "/",
+    "on-click": "alacritty -e 'htop'"
+  },
+  
+  "custom/weather": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --custom-indicator '{ICON}{temp_C}°C'",
+    "return-type": "json"
+  },
+  
+  "group/control-center": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false
+    },
+    "modules": ["custom/arrow-left","group/audio","group/connection"]
+  },
+  "group/audio": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "pulseaudio"
+      // "pulseaudio/slider"
+    ]
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon}",
+    "tooltip-format": "{volume}% {icon} | {desc}",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "headphones": "󰋌",
+      "handsfree": "󰋌",
+      "headset": "󰋌",
+      "phone": "",
+      "portable": "",
+      "car": " ",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click-middle": "changevolume mute",
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "smooth-scrolling-threshold": 1
+  },
+  "group/connection": {
+    "orientation": "inherit",
+    "modules": ["bluetooth","network"]
+  },
+  "bluetooth": {
+    "format-on": "",
+    "format-off": "󰂲",
+    "format-disabled": "",
+    "format-connected": "",
+    "tooltip": true,
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "blueman-manager"
+  },
+  "network": {
+    "format": "{icon} {bandwidthTotalBytes}",
+    "format-icons": {
+      "wifi": ["󰤨"],
+      "ethernet": ["󰈁"],
+      "disconnected": [""]
+    },
+    "format-wifi": "󰤨",
+    "format-ethernet": "󰈁",
+    "format-disconnected": "󰖪",
+    "format-linked": "󰈁",
+    "interval": 5,
+    "tooltip-format": "{ipaddr}",
+    "tooltip-format-wifi": " {essid}: ({signalStrength}%) \n{ipaddr} @{frequency}MHz {icon} ",
+    "tooltip-format-ethernet": " {ifname}: {ipaddr} | {frequency} MHz{icon} ",
+    "tooltip-format-disconnected": "⚠ Disconnected.",
+    "tooltip": true,
+    "on-click": "alacritty -e 'nmtui'"
+  },
 }
