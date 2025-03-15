@@ -19,7 +19,7 @@
     ],
   
     "modules-right": [
-      "group/video",
+      "group/tools",
       "group/power",
       "clock"
     ]

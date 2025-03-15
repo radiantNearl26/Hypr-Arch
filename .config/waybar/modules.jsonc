@@ -41,7 +41,7 @@
     "format": "󱧕 {}",
     "tooltip": true,
     "interval": 43200, // 12 hours
-    "exec": "~/.scripts/check_updates.sh",
+    "exec": "~/.scripts/check-updates.sh",
     "return-type": "json"
   },
   
@@ -87,25 +87,31 @@
 
 
   //Top Bar - modules-right
-  "group/video": {
+  "group/tools": {
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 300,
       "transition-left-to-right": false
     },
-    "modules": ["custom/arrow-left","custom/record", "custom/section", "custom/stop"]
+    "modules": ["custom/arrow-left","custom/theme","custom/record", "custom/section", "custom/stop"]
+  },
+  "custom/theme": {
+    "format": "󰏘",
+    "tooltip": true,
+    "tooltip-format": "Switch Theme",
+    "on-click": "~/.scripts/toggle-theme.sh"
   },
   "custom/record": {
     "format": "",
     "tooltip": true,
     "tooltip-format": "Record Screen",
-    "on-click": "bash ~/.config/hypr/scripts/record.sh fullscreen"
+    "on-click": "bash ~/.scripts/record.sh fullscreen"
   },
   "custom/stop": {
     "format": "󰻃",
     "tooltip": true,
     "tooltip-format": "Stop Recording",
-    "on-click": "bash ~/.config/hypr/scripts/record.sh stop"
+    "on-click": "bash ~/.scripts/record.sh stop"
   },
   "custom/section": {
     "format": "",
@@ -231,7 +237,7 @@
     "format": "{}",
     "tooltip": true,
     "interval": 3600,
-    "exec": "wttrbar --custom-indicator '{ICON}{temp_C}°C'",
+    "exec": "wttrbar --nerd --hide-conditions --location 'West Bengal' --custom-indicator '{ICON} {temp_C}°C'",
     "return-type": "json"
   },
   
@@ -241,66 +247,59 @@
       "transition-duration": 300,
       "transition-left-to-right": false
     },
-    "modules": ["custom/arrow-left","group/audio","group/connection"]
+    "modules": ["custom/arrow-left","network","bluetooth","backlight","pulseaudio"]
   },
-  "group/audio": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "pulseaudio"
-      // "pulseaudio/slider"
-    ]
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} ",
+    "format-icons": ["󰃟", "󰃠"],
+    "on-scroll-down": "brightnessctl s +2%",
+    "on-scroll-up": "brightnessctl s -2%"
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}‎",
     "format-bluetooth": "{icon}",
     "tooltip-format": "{volume}% {icon} | {desc}",
     "format-muted": "󰖁",
     "format-icons": {
-      "headphones": "󰋌",
-      "handsfree": "󰋌",
-      "headset": "󰋌",
+      "headphones": "",
+      "handsfree": "󰋍",
+      "headset": "",
       "phone": "",
-      "portable": "",
+      "portable": "",
       "car": " ",
       "default": ["󰕿", "󰖀", "󰕾"]
     },
     "on-click-middle": "changevolume mute",
     "on-click": "pavucontrol",
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
     "smooth-scrolling-threshold": 1
   },
-  "group/connection": {
-    "orientation": "inherit",
-    "modules": ["bluetooth","network"]
-  },
   "bluetooth": {
-    "format-on": "",
-    "format-off": "󰂲",
-    "format-disabled": "",
-    "format-connected": "",
+    "format-on": "  ",
+    "format-off": " 󰂲 ",
+    "format-disabled": " 󰂲 ",
+    "format-connected": "  ",
     "tooltip": true,
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "blueman-manager"
+    "on-click": "blueman-manager",
+    "on-click-right": "alacritty -e 'bluetui'"
   },
   "network": {
-    "format": "{icon} {bandwidthTotalBytes}",
+    "format": "{icon} ",
     "format-icons": {
-      "wifi": ["󰤨"],
+      "wifi": [""],
       "ethernet": ["󰈁"],
       "disconnected": [""]
     },
-    "format-wifi": "󰤨",
-    "format-ethernet": "󰈁",
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
     "format-disconnected": "󰖪",
-    "format-linked": "󰈁",
+    "format-linked": "󰈀",
     "interval": 5,
     "tooltip-format": "{ipaddr}",
     "tooltip-format-wifi": " {essid}: ({signalStrength}%) \n{ipaddr} @{frequency}MHz {icon} ",

@@ -11,7 +11,7 @@
 }
 
 window#waybar {
-  background: alpha(@background, 1);
+  background: alpha(@background, 0.95);
   border-bottom: 0px solid alpha(@main-color, 0.5);
 }
 
@@ -42,16 +42,40 @@ tooltip label {
 
 #cpu,
 #memory,
-#disk,
+#disk {
+  padding: 2px 6px;
+  margin: 8px 4px;
+  background: alpha(darker(@main-color), 0.3);
+  color: @main-color;
+  border-radius: 10px;
+}
+
+#custom-control-center {
+  margin: 0px 0px 0px 0px;
+}
+
 #custom-record,
 #custom-stop,
 #custom-section,
-#custom-updates {
+#custom-theme,
+#custom-weather {
   padding: 0px 6px;
   margin: 8px 4px;
   background: alpha(darker(@main-color), 0.3);
   color: @main-color;
   border-radius: 10px;
+}
+
+#pulseaudio,
+#network,
+#bluetooth,
+#backlight {
+  padding: 0px 3px 0px 0px;
+  margin: 0px 1px 0px 1px;
+  background-color: transparent;
+  background: alpha(@background, 0.3);
+  border-radius: 10px;
+  color: lighter(@main-color);
 }
 
 #workspaces {
@@ -83,50 +107,20 @@ tooltip label {
   border-radius: 10px;
 }
 
-#control-center {
-  padding: 0px 8px;
-  margin: 8px 4px;
-  color: lighter(@main-color);
-  background: alpha(@background, 15);
-  border-radius: 10px;
-}
-
-#network,
-#pulseaudio {
-  padding: 0px 0 0 4px;
-}
-
-#pulseaudio-slider slider {
-  min-height: 0px;
-  min-width: 0px;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-#pulseaudio-slider {
-  margin: 10px;
-}
-
-#pulseaudio-slider highlight {
-  border-radius: 8px;
-  background-color: transparent;
-}
-
 #tray {
-  padding: 0px 0px 0px 10px;
+  padding: 0px 2px 0px 2px;
   background-color: transparent;
 }
 
 #custom-arrow-left {
   color: alpha(lighter(@main-color),0.8);
-  margin: 0px 4px;
-  margin: 0px 2px 4px 4px;
-
+  margin: 4px 4px 4px 4px;
 }
 
+
+
 #custom-notifications,
-#custom-weather,
+#custom-updates,
 #custom-theme-switcher {
   padding: 0px 8px;
   margin: 6px 4px;
@@ -136,10 +130,8 @@ tooltip label {
 }
 
 #clock {
-  padding: 0px 5px 0px 0px;
-
+  padding: 4px 6px 0px 0px;
   margin: 0px 2px 4px 4px;
-
   background: alpha(@background, 0.3);
   border-radius: 10px;
   color: lighter(@main-color);
@@ -149,13 +141,13 @@ tooltip label {
   background: alpha(@main-color, 0);
   color: @main-color;
   border-radius: 10px;
-  margin: 0px 0px 0px 0px;
+  margin: 4px 0px 0px 0px;
 
 }
 
 #power-profiles-daemon {
   padding: 0px 8px;
-  margin: 8px 0px 8px 4px;
+  margin: 4px 0px 8px 4px;
   color: @main-color;
   background: alpha(darker(@main-color), 0.3);
   border-radius: 10px;
@@ -177,8 +169,8 @@ tooltip label {
 
 
 #taskbar {
-  padding: 0px 8px;
-  margin: 0px 5px;
+  padding: 0px 4px;
+  margin: 0px 0px;
   background: alpha(darker(@main-color), 0);
   border-radius: 10px;
   color: lighter(@main-color);
@@ -195,16 +187,6 @@ tooltip label {
   background: alpha(darker(@main-color), 0.3);
   border-radius: 10px;
 }
-
-#bluetooth {
-  margin: 0px 5px 0px 7px;
-  color: @foreground;
-}
-
-
-
-
-
 
 /*
 .modules-left {
