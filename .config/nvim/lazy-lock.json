@@ -1,6 +1,23 @@
 {
+  "aerial.nvim": { "branch": "master", "commit": "2204cf08791449a6a2fd2ef187a29112eeefd989" },
+  "alpha-nvim": { "branch": "main", "commit": "de72250e054e5e691b9736ee30db72c65d560771" },
+  "barbecue": { "branch": "main", "commit": "cd7e7da622d68136e13721865b4d919efd6325ed" },
+  "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "lualine.nvim": { "branch": "master", "commit": "b8b60c7f1d0d95ad74ee215b2291280b30482476" },
   "luarocks.nvim": { "branch": "main", "commit": "1db9093915eb16ba2473cfb8d343ace5ee04130a" },
+  "midnight.nvim": { "branch": "main", "commit": "fe062a6f2e5bd77cd8a260f61e6e12789eaf4f13" },
+  "neo-tree.nvim": { "branch": "v3.x", "commit": "9b5d67119c46e3262ffe1508fe6d8540b79ad75d" },
+  "nui.nvim": { "branch": "main", "commit": "8d3bce9764e627b62b07424e0df77f680d47ffdb" },
+  "nvim-lsp-file-operations": { "branch": "master", "commit": "9744b738183a5adca0f916527922078a965515ed" },
+  "nvim-lspconfig": { "branch": "master", "commit": "2574ad38c6ee4f0bef3a1ca305cd5df627a52bb3" },
+  "nvim-navic": { "branch": "master", "commit": "8649f694d3e76ee10c19255dece6411c29206a54" },
+  "nvim-spectre": { "branch": "master", "commit": "ddd7383e856a7c939cb4f5143278fe041bbb8cb9" },
+  "nvim-treesitter": { "branch": "master", "commit": "d76a8b6e1b67fd3bcffec4a5d45fd9dee4dbbee8" },
+  "nvim-web-devicons": { "branch": "master", "commit": "d0cafff5c4347a604a07edf7bb9a91fda7eb577e" },
+  "nvim-window-picker": { "branch": "main", "commit": "6382540b2ae5de6c793d4aa2e3fe6dbb518505ec" },
+  "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
+  "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "tokyogogh.nvim": { "branch": "main", "commit": "d22e3a8c668251a7b92401bdad67ba9978ed2e3c" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" }
 }
