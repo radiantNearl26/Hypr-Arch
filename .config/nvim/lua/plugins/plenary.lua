@@ -1,3 +1,3 @@
-require("lazy").setup({
+return {
   "nvim-lua/plenary.nvim",
-})
+}
