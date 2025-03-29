@@ -1,16 +1,16 @@
 [general]
-import = [ "~/.config/alacritty/colors.toml" ]
+import = ["~/.config/alacritty/themes/aura-dark.toml"]
 
 [cursor.style]
 shape = "Block"
 blinking = "On"
 
 [env]
-TERM = "alacritty"
+TERM = "xterm-256color"
 
 [font]
 # Set the point size
-size = 12
+size = 10
 
 [font.normal]
 family = "BlexMono Nerd Font Mono"
