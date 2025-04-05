@@ -4,6 +4,7 @@
 
 alias nv="nvim"
 alias nm="nmtui"
+alias smile="it.mijorus.smile" #cant use smile to exec since its a flatpak maybe (need to use full package name)
 alias ct="cointop"
 alias cl="clear && colorscript -e "zwaves""
 alias q="exit"
