@@ -59,3 +59,7 @@ color = "#c0caf5"
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 save_to_clipboard = true
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["--login", "-c", "salut"]
