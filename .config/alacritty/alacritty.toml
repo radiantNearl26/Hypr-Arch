@@ -1,5 +1,6 @@
-[general]
-import = ["~/.config/alacritty/themes/aura-dark.toml"]
+## Importing colorscheme is disabled. pywal is responsible for syncing colors with the wallpaper.
+# [general]
+# import = ["~/.config/alacritty/themes/aura-dark.toml"]
 
 [cursor.style]
 shape = "Block"
