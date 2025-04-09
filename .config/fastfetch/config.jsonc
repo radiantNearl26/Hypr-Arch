@@ -40,6 +40,7 @@
 		{ "type": "theme", "key": "" },
 		{ "type": "terminal", "key": "" },
 		{ "type": "memory", "key": "󰍛" },
+		{ "type": "battery", "key": "󰂄" },
 		"break",
 		{ "type": "colors", "symbol": "circle" }
 	]
