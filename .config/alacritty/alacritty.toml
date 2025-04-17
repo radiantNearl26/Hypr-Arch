@@ -14,20 +14,20 @@ TERM = "xterm-256color"
 size = 10
 
 [font.normal]
-family = "BlexMono Nerd Font Mono"
+family = "ComicShannsMono Nerd Font Propo"
 style = "Regular"
 
-[font.italic]
-family = "BlexMono Nerd Font Mono"
-style = "Italic"
+## [font.italic]
+# family = "ComicShannsMono Nerd Font"
+# style = "Italic"
 
 [font.bold]
-family = "BlexMono Nerd Font Mono"
+family = "ComicShannsMono Nerd Font Propo"
 style = "Bold"
 
-[font.bold_italic]
-family = "BlexMono Nerd Font Mono"
-style = "Bold Italic"
+## [font.bold_italic]
+# family = "ComicShannsMono Nerd Font"
+# style = "Bold Italic"
 
 [font.glyph_offset]
 x = 0
