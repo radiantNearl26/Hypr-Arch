@@ -2,10 +2,10 @@
     "output": {
         "blocklist": [],
         "convolver#0": {
-            "autogain": false,
+            "autogain": true,
             "bypass": false,
-            "input-gain": -2.0,
-            "ir-width": 100,
+            "input-gain": 0.0,
+            "ir-width": 125,
             "kernel-name": "HTC Beats Audio ((Z-Edition))",
             "output-gain": 0.0
         },
@@ -16,7 +16,7 @@
             "left": {
                 "band0": {
                     "frequency": 10010.0,
-                    "gain": 9.7,
+                    "gain": 14.96,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.0,
@@ -26,8 +26,8 @@
                     "width": 4.0
                 },
                 "band1": {
-                    "frequency": 65.0,
-                    "gain": 7.78,
+                    "frequency": 55.0,
+                    "gain": 6.93,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 2.0,
@@ -45,7 +45,7 @@
             "right": {
                 "band0": {
                     "frequency": 10010.0,
-                    "gain": 9.7,
+                    "gain": 14.96,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.0,
@@ -55,8 +55,8 @@
                     "width": 4.0
                 },
                 "band1": {
-                    "frequency": 65.0,
-                    "gain": 7.78,
+                    "frequency": 55.0,
+                    "gain": 6.93,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 2.0,
@@ -76,14 +76,14 @@
             "input-gain": 0.0,
             "output-gain": 0.0,
             "std": "ISO226-2003",
-            "volume": -6.499999999999995
+            "volume": -0.5
         },
         "maximizer#0": {
             "bypass": false,
             "input-gain": 0.0,
-            "output-gain": 0.0,
+            "output-gain": 0.1,
             "release": 10.0,
-            "threshold": 0.0
+            "threshold": -0.9999999999999997
         },
         "plugins_order": [
             "equalizer#0",
@@ -93,7 +93,7 @@
             "maximizer#0"
         ],
         "reverb#0": {
-            "amount": -3.3000000000000003,
+            "amount": -3.2,
             "bass-cut": 500.0,
             "bypass": false,
             "decay-time": 1.3,
