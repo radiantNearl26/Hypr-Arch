@@ -47,8 +47,8 @@ export ZSH_COMPDUMP="$ZDOTDIR/zsh-compdump/.zcompdump"
 export EDITOR="nvim"
 # export BROWSER="ungoogled-chromium-bin" # INFO: Disabled due to stability issues.
 export BROWSER="librewolf-bin" 
-# export PAGER="less"
-export TERMINAL="xfce-terminal" # INFO: alacritty config build in progress.
+export PAGER="less"
+export TERMINAL="alacritty"
 
 # Default language and locale
 export LANG="en_US.UTF-8"
