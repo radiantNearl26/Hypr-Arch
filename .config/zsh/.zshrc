@@ -21,8 +21,8 @@ zstyle ':omz:plugins:alias-finder' autoload yes
 source $HOME/.config/zsh/ohmyzsh/oh-my-zsh.sh
 
 # Export directories to $PATH
-export PATH=$PATH:/home/Asmit/.spicetify
-export PATH=$PATH:/home/.local/bin/
+export PATH=$PATH:~/.spicetify
+export PATH=$PATH:~/.local/bin/
 
 # Enable oh-my-posh prompt
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/peru.omp.json)"
