@@ -13,41 +13,54 @@ alias zx="Hyprland"
 alias hypr="Hyprland"
 alias ff="fastfetch"
 alias rb="reboot"
-alias pb="halt --poweroff"
+alias pb="systemctl --poweroff"
+alias wgu="wg-quick up US-12"
+alias wgd="wg-quick down US-12"
 
 alias launch="hyprctl dispatch exec"
 alias pkill="pkill -e"
 
 #
+# quick open text files using neovim
+#
+alias nvhy="nvim .config/hypr/hyprsource/"
+alias nvzs="nvim .config/zsh/custom/"
+
+#
+# Yay (along with pacman) Commands
+# NOTE: Will do later:
+
+
+#
 # Dotfiles (git) Commands
 #
 
-alias dot='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-alias dcom='dot commit -m'
-alias damend='dot commit --amend'
-alias dadd='dot add'
-alias dstat='dot status'
-alias dlog='dot log --pretty=format:"%h - %an , %ar : %s" --graph HEAD'
+alias dot="git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME""
+alias dcom="dot commit -m"
+alias damend="dot commit --amend"
+alias dadd="dot add"
+alias dstat="dot status"
+alias dlog="dot log --pretty=format:"%h - %an , %ar : %s" --graph HEAD"
 
-alias dpush='dot push -u origin main'
+alias dpush="dot push -u origin main"
 # alias dparm='dot push -u origin termux-xfce'
 
-alias drh='dot reset HEAD'
-alias dmv='dot mv'
-alias dcout='dot checkout --'
-alias ddiff='dot diff'
+alias drh="dot reset HEAD"
+alias dmv="dot mv"
+alias dcout="dot checkout --"
+alias ddiff="dot diff"
 
-alias drs='dot restore --staged'
-alias dr='dot restore --'
+alias drs="dot restore --staged"
+alias dr="dot restore --"
 
-alias dlsname='dot ls-files --name-only'
-alias dlsdel='dot ls-files -d --name-only'
-alias dlsmod='dot ls-files -m --name-only'
-alias dlsignore='dot ls-files -i --name-only'
-alias dlsstaged='dot ls-files -s --name-only'
+alias dlsname="dot ls-files --name-only"
+alias dlsdel="dot ls-files -d --name-only"
+alias dlsmod="dot ls-files -m --name-only"
+alias dlsignore="dot ls-files -i --name-only"
+alias dlsstaged="dot ls-files -s --name-only"
 
-alias dfiles='ls --group-directories-first --color=auto -Rd $(dot ls-tree -r $(dot branch | grep \* | cut -d " " -f2) --name-only)'
-alias ddir='ls --group-directories-first --color=auto -d $(dot ls-tree -dr $(dot branch | grep \* | cut -d " " -f2) --name-only)'
+alias dfiles="ls --group-directories-first --color=auto -Rd $(dot ls-tree -r $(dot branch | grep \* | cut -d " " -f2) --name-only)"
+alias ddir="ls --group-directories-first --color=auto -d $(dot ls-tree -dr $(dot branch | grep \* | cut -d " " -f2) --name-only)"
 
 #
 # Startpage (git) Commands
