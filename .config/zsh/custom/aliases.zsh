@@ -40,7 +40,7 @@ alias dcom="dot commit -m"
 alias damend="dot commit --amend"
 alias dadd="dot add"
 alias dstat="dot status"
-alias dlog="dot log --pretty=format:"%h - %an , %ar : %s" --graph HEAD"
+alias dlog='dot log --pretty=format:"%h - %an , %ar : %s" --graph HEAD'
 
 alias dpush="dot push -u origin main"
 # alias dparm='dot push -u origin termux-xfce'
