@@ -15,4 +15,4 @@ alias grep='grep --color=auto'
 cat ~/.cache/wal/sequences
 
 # To add support for TTYs this line can be optionally added. [Use default colors for tty, looks better!]
-# source ~/.cache/wal/colors-tty.sh
+source ~/.cache/wal/colors-tty.sh
