@@ -1,6 +1,6 @@
 ## Importing colorscheme is disabled. pywal is responsible for syncing colors with the wallpaper.
 # [general]
-# import = ["~/.config/alacritty/themes/aura-dark.toml"]
+# import = ["~/.config/alacritty/themes/catppuccin-latte.toml"]
 
 [cursor.style]
 shape = "Block"
@@ -11,7 +11,7 @@ TERM = "xterm-256color"
 
 [font]
 # Set the point size
-size = 10
+size = 13
 
 [font.normal]
 family = "ComicShannsMono Nerd Font Propo"
@@ -49,7 +49,7 @@ startup_mode = "Windowed"
 dynamic_title = true
 
 [window.padding]
-x = 25
+x = 35
 y = 25
 
 [bell]
