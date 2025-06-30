@@ -21,6 +21,14 @@ alias launch="hyprctl dispatch exec"
 alias pkill="pkill -e"
 
 #
+# A safer approach to rm
+#
+alias rm="trash-put"
+alias rmlist="trash-list"
+alias rmres="trash-restore"
+alias rmdel="trash-rm"
+
+#
 # quick open text files using neovim
 #
 alias nvhy="nvim .config/hypr/hyprsource/"
