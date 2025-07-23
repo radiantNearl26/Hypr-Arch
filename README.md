@@ -1,48 +1,38 @@
-<h1 style="text-align: center;">Hypr-Dots - A Super-charged Arch-Hyprland Setup</h1>
+<h1 align="center">Hypr-Arch</h1>
+> A super-charged Arch-Hyprland Setup, created and maintained by Asmit Das Choudhury (@radiantNearl26)
 
-This repository contains my personal dotfiles, which are configuration files for various tools and applications on my system. These files are used to customize my workflow, shell, and other aspects of my computing environment.
+> [!info] Last Updated Status
+>
+> This file has been last updated on July 23, 2025. Hence, the version recommendations in the requirements section might be outdated, but fret not as I will make sure to fix any issues if it doesn't works on my system.
 
-## What's included?
+This repository contains my personal dotfiles, which are configuration files for various tools and applications on my system. These files are used to customize my workflow, shell, and other aspects of my computing environment. 
 
-1. .bashrc`: My bash shell configuration file, which sets up my command prompt, aliases, and other shell settings.
+> [!NOTE]
+>
+> My dotfiles won't probably work out of the box since the configuration files in this repository are tailored to my current setup. If you're using these configurations and make changes to get them working for you, please consider contributing those changes back to the repository. You can refer to the contributing.md guide anytime or reach out to me via DMs or Email.
 
-2. `nvim.lua: My NVim editor configuration file, which customizes my Vim experience with plugins, keybindings, and more.
+## Requirements
+> [!NOTE]
+>
+> Currenly working on a script to automate the process of installing the below mentioned softwares from the official pacman repositories or the community AUR repository (yay) or the official flathub repository. Consider contributing if you want to add support for other package managers from other popular distributions to make their task much easier.
 
-3. `.gitconfig: My Git configuration file, which sets up my Git username, email, and other preferences.
+Before you clone this repository on your system or use it, it is advised to make sure the below mentioned packages are installed on your system and are updated to the latest version or above the mentioned versions for the optimal experience:
 
-4. `.zshrc: My Zsh shell configuration file, which sets up my command prompt, aliases, and other shell settings (for systems where I use Zsh).
+- **Arch Linux** (or any arch-based distributions like CachyOS, Garuda Linux, Manjaro Linux, EndaveourOS, SteamOS, etc.)
+- **Hyprland** (Wayland) (launching using uwsm is recommended for startup apps like easyeffects, wayabr, etc.)
+- **ZSH** (v5.9 or above)
+- **Alacritty** (v0.16.0 or above)
+- **NeoVim** (v0.11.2 or above)
+- *more coming soon**
 
-## How to use these dotfiles
-If you're interested in using these dotfiles, you can clone this repository and then create symbolic links to the files in your home directory. For example:
-
-```zsh
-git clone https://github.com/your-username/dotfiles.git
-cd dotfiles
-```
-Then, you copy the config you like in your $XDG-CONFIG-DIR/.config folder. Have fun tweaking the configs.
-
-## Note
-Be careful when using someone else's dotfiles, as they may contain customizations that are specific to their system or workflow. Make sure to review the files carefully before using them.
-
-## License
-These dotfiles are released under the MIT License. See the `LICENSE` file for details.
-
-## Contributing
-If you'd like to contribute to these dotfiles, please feel free to submit a pull request or open an issue to discuss changes.
+## Features
+> content coming up soon.. stay tuned!
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+For guides to use my dotfiles on your system, please refer to the dotfiles_guide.md for a detailed info.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+## Contributing
+If you'd like to contribute to these dotfiles, please feel free to submit a pull request or open an issue to discuss changes and proceed with the usual procedure. In case of any issues or troubles, feel free to check out the contributing.md guide or reach out to me via email or DMs.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## License
+These dotfiles are released under the BSD 2-Clause "Simplified" License. See the `LICENSE` file for details.
