@@ -16,15 +16,15 @@ vim.opt.shiftwidth = 4   -- insert 4 spaces on a tab
 vim.opt.expandtab = true -- tabs are spaces, mainly because of python
 
 -- UI config
-vim.opt.number = true         -- show absolute number
-vim.opt.relativenumber = true -- add numbers to each line on the left side
-vim.opt.cursorline = true     -- highlight cursor line underneath the cursor horizontally
-vim.opt.splitbelow = true     -- open new vertical split bottom
-vim.opt.splitright = true     -- open new horizontal splits right
-vim.opt.termguicolors = true  -- enabl 24-bit RGB color in the TUI
-vim.opt.showmode = false      -- Displays the current mode
-vim.opt.wrap = false          -- Enables/Disabled wordwrap mode
-vim.opt.termguicolors = true  -- Enables colored gui icons (req for bufferline-nvim)
+vim.opt.number = true          -- show absolute number
+vim.opt.relativenumber = false -- add numbers to each line on the left side
+vim.opt.cursorline = true      -- highlight cursor line underneath the cursor horizontally
+vim.opt.splitbelow = true      -- open new vertical split bottom
+vim.opt.splitright = true      -- open new horizontal splits right
+vim.opt.termguicolors = true   -- enabl 24-bit RGB color in the TUI
+vim.opt.showmode = false       -- Displays the current mode
+vim.opt.wrap = true            -- Enables/Disabled wordwrap mode
+vim.opt.termguicolors = true   -- Enables colored gui icons (req for bufferline-nvim)
 
 -- Searching
 vim.opt.incsearch = true  -- search as characters are entered
