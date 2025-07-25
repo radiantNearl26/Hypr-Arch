@@ -13,13 +13,19 @@ Before you clone this repository on your system or use it, it is advised to make
 
 - **Arch Linux** (or any arch-based distributions like CachyOS, Garuda Linux, Manjaro Linux, EndaveourOS, SteamOS, etc.)
 - **Hyprland** (Wayland) (launching using uwsm is recommended for startup apps like easyeffects, wayabr, etc.)
-- **ZSH** (v5.9 or above)
+- **Zsh** (v5.9 or above)
 - **Alacritty** (v0.16.0 or above)
 - **NeoVim** (v0.11.2 or above)
 - *more coming soon*
 
-## Features
+## Default Applications
+> content coming up soon.. stay tuned! (self note: take inspiration from ML4W)
+
+## Screenshots
 > content coming up soon.. stay tuned!
+
+## Documentation
+> content coming up soon.. stay tuned! (self note: take inspiration from ML4W & Hyprland)
 
 ## Installation
 For guides to use my dotfiles on your system, please refer to the [`GUIDE`](./GUIDE.md) file for a detailed info.
