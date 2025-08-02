@@ -18,14 +18,14 @@ Before you clone this repository on your system or use it, it is advised to make
 - **NeoVim** (v0.11.2 or above)
 - *more coming soon*
 
-## Default Applications
-> content coming up soon.. stay tuned! (self note: take inspiration from ML4W)
-
 ## Screenshots
 > content coming up soon.. stay tuned!
 
-## Documentation
-> content coming up soon.. stay tuned! (self note: take inspiration from ML4W & Hyprland)
+## File Structure
+> content coming up soon.. stay tuned! (self note: take inspiration from maxixs/perplexity)
+
+## Default Applications
+> content coming up soon.. stay tuned! (self note: take inspiration from ML4W)
 
 ## Installation
 For guides to use my dotfiles on your system, please refer to the [`GUIDE`](./GUIDE.md) file for a detailed info.
