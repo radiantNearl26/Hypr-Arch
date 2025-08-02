@@ -5,7 +5,7 @@
             "autogain": true,
             "bypass": false,
             "input-gain": 0.0,
-            "ir-width": 125,
+            "ir-width": 150,
             "kernel-name": "HTC Beats Audio ((Z-Edition))",
             "output-gain": 0.0
         },
@@ -16,7 +16,7 @@
             "left": {
                 "band0": {
                     "frequency": 10010.0,
-                    "gain": 14.96,
+                    "gain": 9.14,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.0,
@@ -26,8 +26,8 @@
                     "width": 4.0
                 },
                 "band1": {
-                    "frequency": 55.0,
-                    "gain": 6.93,
+                    "frequency": 52.0,
+                    "gain": 9.1,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 2.0,
@@ -45,7 +45,7 @@
             "right": {
                 "band0": {
                     "frequency": 10010.0,
-                    "gain": 14.96,
+                    "gain": 9.14,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.0,
@@ -55,8 +55,8 @@
                     "width": 4.0
                 },
                 "band1": {
-                    "frequency": 55.0,
-                    "gain": 6.93,
+                    "frequency": 52.0,
+                    "gain": 9.1,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 2.0,
@@ -70,16 +70,16 @@
         },
         "loudness#0": {
             "bypass": true,
-            "clipping": true,
-            "clipping-range": 6.0,
+            "clipping": false,
+            "clipping-range": 2.900000000000006,
             "fft": "2048",
             "input-gain": 0.0,
             "output-gain": 0.0,
             "std": "ISO226-2003",
-            "volume": -0.5
+            "volume": -2.0
         },
         "maximizer#0": {
-            "bypass": false,
+            "bypass": true,
             "input-gain": 0.0,
             "output-gain": 0.1,
             "release": 10.0,
@@ -93,7 +93,7 @@
             "maximizer#0"
         ],
         "reverb#0": {
-            "amount": -3.2,
+            "amount": -3.0,
             "bass-cut": 500.0,
             "bypass": false,
             "decay-time": 1.3,
