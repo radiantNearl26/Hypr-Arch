@@ -1,8 +1,10 @@
 # Guide to create and replicate dotfiles using bare repositories                          
 
-> *Note*: This guide is also availabe on [Arch Wiki](https://wiki.archlinux.org/title/Dotfiles "Link to ArchWiki's guide for dotfiles") and [AskHN](https://news.ycombinator.com/item?id=11070797 "Link to AskHN's guide for dotfiles").
+> [!CAUTION] Before you continue
+> This guide is also availabe on [Arch Wiki](https://wiki.archlinux.org/title/Dotfiles "Link to ArchWiki's guide for dotfiles") and [AskHN](https://news.ycombinator.com/item?id=11070797 "Link to AskHN's guide for dotfiles"). Refer to those guides to know more about creating your own dotfiles and maintaining them using various tools. This guide is specifically tailored for replicating my dotfiles on your system, so using it on other's repositories won't probably work.
 
-> *Warn*: SSH method is more secure but requires more time to configure.
+> [!NOTE]
+> SSH method is more secure but requires more time to configure. If you find difficulties with using using it, try using the HTTPS method mentioned here.
 
 **Step 1: Create a bare local repository**	⇨ *Initialize a bare Git repository in a new directory (e.g., `~/.dotfiles`)*
 
