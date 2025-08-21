@@ -4,6 +4,7 @@
 
 alias nv="nvim"
 alias nm="nmtui"
+alias fm="ranger"
 alias smile="it.mijorus.smile" #cant use smile to exec since its a flatpak maybe (need to use full package name)
 alias ct="cointop"
 alias cl="clear && colorscript -e "crunchbang-mini""
@@ -13,12 +14,17 @@ alias zx="Hyprland"
 alias hypr="Hyprland"
 alias ff="fastfetch"
 alias rb="reboot"
+alias ls="lss"
+alias lss="exa --long --all -bgHhiSmg --group-directories-first"
 alias pb="systemctl --poweroff"
 alias wgu="wg-quick up US-12"
 alias wgd="wg-quick down US-12"
+alias ez="easyeffects --gapplication-service"
 
 alias launch="hyprctl dispatch exec"
 alias pkill="pkill -e"
+
+alias turbo="echo "0" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
 
 #
 # A safer approach to rm
