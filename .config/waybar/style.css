@@ -1,6 +1,7 @@
 @import "/home/Asmit/.cache/wal/colors-waybar.css";
 
-@define-color main-color @color14;
+@define-color main-color @color13;
+@define-color text-color @color15;
 
 * {
     font: bold 13px "JetBrainsMono Nerd Font Propo";
@@ -11,7 +12,7 @@
 }
 
 window#waybar {
-    background: alpha(@background, 0.95);
+    background: alpha(@background, 0.85);
     border-bottom: 0px solid alpha(@main-color, 0.5);
 }
 
@@ -43,24 +44,24 @@ tooltip label {
 
 #cpu,
 #memory,
-#disk {
-    padding: 2px 6px;
-    margin: 8px 4px;
+#disk,
+#custom-weather {
+    padding: 3px 10px;
+    margin: 7px 4px;
     background: alpha(darker(@main-color), 0.3);
-    color: @main-color;
-    border-radius: 10px;
+    color: @text-color;
+    border-radius: 12px;
 }
 
 #custom-record,
 #custom-stop,
 #custom-section,
-#custom-theme,
-#custom-weather {
-    padding: 0px 6px;
+#custom-theme {
+    padding: 1px 10px;
     margin: 8px 4px;
     background: alpha(darker(@main-color), 0.3);
-    color: @main-color;
-    border-radius: 10px;
+    color: @text-color;
+    border-radius: 12px;
 }
 
 #pulseaudio,
@@ -72,16 +73,17 @@ tooltip label {
 }
 
 #workspaces {
-    margin: 4px 2px 6px 4px;
-    background: alpha(#201a27, 0.85);
-    border-radius: 10px;
+    margin: 5px 2px;
+    padding: 0px 0px;
+    background: alpha(darker(@foreground), 0.1);
+    border-radius: 12px;
 }
 
 
 #workspaces button {
     padding: 0px 4px;
     margin: 0px 4px;
-    color: alpha(@foreground, 0.3);
+    color: alpha(@foreground, 0.7);
 
 }
 
@@ -89,7 +91,7 @@ tooltip label {
     transition: color 0.5s;
     color: @main-color;
     background: alpha(darker(@main-color), 0.2);
-    border-radius: 10px;
+    border-radius: 12px;
     margin: 0px 0px;
 }
 
@@ -97,12 +99,12 @@ tooltip label {
 #workspaces button:hover {
     color: @color5;
     background: alpha(darker(@main-color), 0.3);
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 #tray {
     padding: 0px 2px 0px 2px;
-    background-color: transparent;
+    color: lighter(@main-color);
 }
 
 #custom-arrow-left {
@@ -115,19 +117,20 @@ tooltip label {
 #custom-notifications,
 #custom-updates,
 #custom-theme-switcher {
-    padding: 0px 8px;
-    margin: 6px 4px;
+    padding: 0px 10px;
+    margin: 6px 6px;
     color: @main-color;
     background: alpha(darker(@main-color), 0.3);
-    border-radius: 10px;
+    color: @text-color;
+    border-radius: 12px;
 }
 
 #clock {
     padding: 4px 6px 0px 0px;
     margin: 0px 2px 4px 4px;
-    background: alpha(@background, 0.3);
     border-radius: 10px;
     color: lighter(@main-color);
+    font: bold 14px "JetBrainsMono Nerd Font Propo";
 }
 
 #power {
@@ -149,6 +152,7 @@ tooltip label {
 #battery {
     padding: 0px 8px;
     margin: 0px 2px 4px 2px;
+    color: lighter(@main-color);
 }
 
 
@@ -156,7 +160,7 @@ tooltip label {
     padding: 0px 8px;
     margin: 8px 4px;
     color: @background;
-    background: alpha(@main-color, 0.8);
+    background: alpha(lighter(@color13), 0.7);
     border-radius: 10px;
 }
 
@@ -165,7 +169,7 @@ tooltip label {
     padding: 0px 4px;
     margin: 0px 0px;
     background: alpha(darker(@main-color), 0);
-    border-radius: 10px;
+    border-radius: 0px;
     color: lighter(@main-color);
 }
 
