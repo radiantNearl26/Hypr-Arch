@@ -9,6 +9,9 @@ blinking = "On"
 [env]
 TERM = "xterm-256color"
 
+[mouse]
+hide_when_typing = true
+
 [font]
 # Set the point size
 size = 13
@@ -51,11 +54,6 @@ dynamic_title = true
 [window.padding]
 x = 35
 y = 25
-
-[bell]
-animation = "Linear"
-duration = 500
-color = "#c0caf5"
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
