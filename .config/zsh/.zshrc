@@ -25,7 +25,7 @@ export PATH=$PATH:~/.spicetify
 export PATH=$PATH:~/.local/bin/
 
 # Enable oh-my-posh prompt
-eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/peru.omp.json)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/powerlevel10k_lean.omp.json)"
 
 # Help command
 autoload -Uz run-help run-help-git run-help-ip run-help-openssl run-help-p4 run-help-sudo run-help-svk run-help-svn
