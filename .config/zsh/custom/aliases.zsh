@@ -5,7 +5,7 @@
 alias nv="nvim"
 alias nm="nmtui"
 alias fm="ranger"
-alias smile="it.mijorus.smile" #cant use smile to exec since its a flatpak maybe (need to use full package name)
+alias smile="it.mijorus.smile" #can't use smile to exec since its a flatpak maybe (need to use full package name)
 alias ct="cointop"
 alias cl="clear && colorscript -e "crunchbang-mini""
 alias q="exit"
@@ -24,7 +24,9 @@ alias ez="easyeffects --gapplication-service"
 alias launch="hyprctl dispatch exec"
 alias pkill="pkill -e"
 
-alias turbo="echo "0" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
+alias tt="echo "0" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
+alias cpy="~/.code/.venv/bin/python"
+alias apy="source /home/Asmit/.code/.venv/bin/activate"
 
 #
 # A safer approach to rm
@@ -37,8 +39,8 @@ alias rmdel="trash-rm"
 #
 # quick open text files using neovim
 #
-alias nvhy="nvim .config/hypr/hyprsource/"
-alias nvzs="nvim .config/zsh/custom/"
+alias nvhy="nvim $HOME/.config/hypr/hyprsource/"
+alias nvzs="nvim $HOME/.config/zsh/custom/"
 
 #
 # Yay (along with pacman) Commands
