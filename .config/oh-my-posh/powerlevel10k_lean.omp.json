@@ -4,6 +4,29 @@
     {
       "segments": [
         {
+          "foreground": "#0fc469",
+          "style": "powerline",
+          "template": "\ue235  ({{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ end }}{{ .Major }}.{{ .Minor }}{{ end }}) ",
+          "type": "python"
+        },
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": " {{ if gt .Code 0 }}<#ff0000>\uf00d</>{{ else }}<#23d18b>\uf42e</>{{ end }} ",
+          "type": "status"
+        },
+        {
+          "foreground": "#bab02a",
+          "properties": {
+            "threshold": 10
+          },
+          "style": "plain",
+          "template": " {{ if gt .Code 0 }}<#ff0000>{{ .FormattedMs }}</>{{ else }}<#23d18b>{{ .FormattedMs }}</>{{ end }} ",
+          "type": "executiontime"
+        },
+        {
           "foreground": "#6E7FC2",
           "properties": {
             "time_format": "15:04:05"
