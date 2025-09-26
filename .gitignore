@@ -12,6 +12,7 @@
 !.dotfiles-guide.md
 !.config/VSCodium/User/settings.json
 !.gitignore
+!.config/oh-my-posh/powerlevel10k_lean.omp.json
 
 # Also heres the folders/files inside .config which needs to be ignored
 .config/audacity/
