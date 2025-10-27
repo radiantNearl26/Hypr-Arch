@@ -28,6 +28,9 @@ alias tt="echo "0" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
 alias cpy="~/.code/.venv/bin/python"
 alias apy="source /home/Asmit/.code/.venv/bin/activate"
 
+alias mount-oth="sudo mkdir /run/media/Asmit/Others && sudo mount /dev/sda1 /run/media/Asmit/Others"
+alias mount-bkp="sudo mkdir /run/media/Asmit/Backup && sudo mount /dev/sda2 /run/media/Asmit/Backup"
+
 #
 # A safer approach to rm
 #
