@@ -14,10 +14,10 @@ hide_when_typing = true
 
 [font]
 # Set the point size
-size = 13
+size = 12
 
 [font.normal]
-family = "ComicShannsMono Nerd Font Propo"
+family = "CaskaydiaCove Nerd Font Mono"
 style = "Regular"
 
 ## [font.italic]
