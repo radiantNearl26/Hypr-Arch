@@ -1,3 +1,7 @@
+<div align="center">
+    <img src=".assets/readme-banner-ylia.png" width="100%" height="100%" alt="Hypr-Arch readme banner">
+</div>
+
 <h1 align="center">Hypr-Arch</h1>
 
 > [!CAUTION]
@@ -9,14 +13,21 @@ A super-charged Arch-Hyprland Setup, created and maintained by Asmit Das Choudhu
 > [!NOTE]
 > Currenly working on a script to automate the process of installing the below mentioned softwares from the official pacman repositories or the community AUR repository (yay) or the official flathub repository. Consider contributing if you want to add support for other package managers from other popular distributions to make their task much easier.
 
-Before you clone this repository on your system or use it, it is advised to make sure the below mentioned packages are installed on your system and are updated to the latest version or above the mentioned versions for the optimal experience:
-
-- **Arch Linux** (or any arch-based distributions like CachyOS, Garuda Linux, Manjaro Linux, EndaveourOS, SteamOS, etc.)
-- **Hyprland** (Wayland) (launching using uwsm is recommended for startup apps like easyeffects, wayabr, etc.)
-- **Zsh** (v5.9 or above)
-- **Alacritty** (v0.16.0 or above)
-- **NeoVim** (v0.11.2 or above)
-- *more coming soon*
+Here's some details about the dotfiles:
++ **OS**: [Arch Linux](https://archlinux.org/)
++ **Window Compositor**: [Hyprland](https://hyprland.org)
++ **Bar / Panels**: [Waybar](https://github.com/Alexays/Waybar), [HyprPanel](https://github.com/Jas-SinghFSU/HyprPanel)
++ **Notifications**: [SwayNC](https://github.com/ErikReider/SwayNotificationCenter)
++ **Shell**: [zsh](https://www.zsh.org/), [fish](https://fishshell.com/)
++ **Terminal**: [kitty](https://sw.kovidgoyal.net/kitty/), [Alacritty](https://github.com/alacritty/alacritty)
++ **Editor**: [Neovim](https://neovim.io/) & [VS Code](https://code.visualstudio.com/)
++ **File Manager**: [Ranger](https://github.com/ranger/ranger) & [Nautilus](https://apps.gnome.org/Nautilus/)
++ **Launcher**: [rofi](https://github.com/davatorium/rofi) & [tofi](https://github.com/philj500/tofi) & [Ulauncher](https://ulauncher.io/)
++ **Browser**: [Chromium](https://www.chromium.org/Home) & [LibreWolf](https://www.librewolf.net)
++ **System Monitor**: [btop](https://github.com/aristocratos/btop) & [htop](https://htop.dev/) & [fastfetch](https://github.com/fastfetch-cli/fastfetch)
++ **Audio / Visualizer**: [EasyEffects](https://github.com/wwmm/easyeffects) & [Cava](https://github.com/karlstav/cava)
++ **Music**: [Spotify](https://www.spotify.com/) & [YT-Music](https:music.youtube.com)
++ **Gaming / Overlay**: [Steam](https://store.steampowered.com) & [Heroic Games Launcher](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher)
 
 ## Screenshots
 > content coming up soon.. stay tuned!
@@ -24,9 +35,32 @@ Before you clone this repository on your system or use it, it is advised to make
 ## File Structure
 > content coming up soon.. stay tuned! (self note: take inspiration from maxixs/perplexity)
 
-## Default Applications
+## Applications
+Here are the applications you need to make sure, are also installed on your system:
 
-> content coming up soon.. stay tuned! (self note: take inspiration from ML4W)
+| Package | Purpose |
+| :--- | :--- |
+| [`alacritty`](https://github.com/alacritty/alacritty) | Terminal emulator |
+| [`bashtop`](https://github.com/aristocratos/bashtop) | Resource monitor |
+| [`btop`](https://github.com/aristocratos/btop) | Resource monitor |
+| [`VS Code`](https://code.visualstudio.com/) | Code editor |
+| [`easyeffects`](https://github.com/wwmm/easyeffects) | Audio effects for PipeWire applications |
+| [`fastfetch`](https://github.com/fastfetch-cli/fastfetch) | System information tool |
+| [`mpv`](https://mpv.io/) | Media player |
+| [`htop`](https://htop.dev/) | Interactive process viewer |
+| [`hypr`](https://hyprland.org/) | Window manager configuration (Hyprland) |
+| [`neofetch`](https://github.com/dylanaraps/neofetch) | System information tool |
+| [`nvim`](https://neovim.io/) | Text editor (Neovim) |
+| [`oh-my-posh`](https://ohmyposh.dev/) | Prompt theme engine |
+| [`rofi`](https://github.com/davatorium/rofi) | Window switcher / Application launcher |
+| [`systemd`](https://systemd.io/) | System and service manager |
+| [`zsh`](https://www.zsh.org/) | Interactive shell |
+| [`tofi`](https://github.com/philj500/tofi) | Menu / Launcher for Wayland |
+| [`ulauncher`](https://ulauncher.io/) | Application launcher |
+| [`waybar`](https://github.com/Alexays/Waybar) | Status bar for Wayland |
+| [`swaync`](https://github.com/ErikReider/SwayNotificationCenter) | Notification daemon for Wayland |
+
+Let me know if i missed few packages.
 
 ## Installation
 For guides to use my dotfiles on your system, please refer to the [`GUIDE`](./GUIDE.md) file for a detailed info.
