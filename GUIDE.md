@@ -6,6 +6,7 @@
 > [!NOTE]
 > SSH method is more secure but requires more time to configure. If you find difficulties with using using it, try using the HTTPS method mentioned here.
 
+## Steps to create you own bare repository
 **Step 1: Create a bare local repository**	⇨ *Initialize a bare Git repository in a new directory (e.g., `~/.dotfiles`)*
 
 ```
