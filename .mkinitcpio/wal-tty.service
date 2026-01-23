@@ -1,0 +1,13 @@
+[Unit]
+Description=Apply pywal colors to TTY
+DefaultDependencies=no
+Before=sysinit.target basic.target
+Conflicts=shutdown.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/setvtrgb /etc/grub.d/colors
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+build() {
+    # Add the executable script
+    add_file "/usr/bin/setvtrgb"
+    add_file "/etc/grub.d/colors"
+
+    # Add the systemd unit and enable it
+    add_systemd_unit "wal-tty.service"
+
+    # Enable the service by manually creating the symlink in initramfs
+    add_symlink "/etc/systemd/system/sysinit.target.wants/wal-tty.service" \
+                "/etc/systemd/system/wal-tty.service"
+    }
+
+help() {
+    echo "Applies pywal colorscheme to virtual terminal early in the initrd boot process."
+}
