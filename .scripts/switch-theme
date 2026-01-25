@@ -1,0 +1,88 @@
+#!/bin/bash
+
+# Usage: switch-theme [light|dark]
+
+MODE=$1
+
+if [[ "$MODE" != "light" && "$MODE" != "dark" ]]; then
+    echo "Usage: $0 [light|dark]"
+    exit 1
+fi
+
+CONFIG_GTK3="$HOME/.config/gtk-3.0/settings.ini"
+CONFIG_GTK4="$HOME/.config/gtk-4.0/settings.ini"
+CONFIG_KVANTUM="$HOME/.config/Kvantum/kvantum.kvconfig"
+
+if [ "$MODE" == "dark" ]; then
+    GTK_THEME="Tokyonight-Dark"
+    ICON_THEME="Papirus-Dark"
+    KVANTUM_THEME="KvArcTokyoNight"
+    PREFER_DARK=1
+    COLOR_SCHEME="prefer-dark"
+    ULAUNCHER_THEME="darkblue-ice"
+    ALACRITTY_THEME="$HOME/.cache/wal/colors-alacritty.toml"
+else
+    GTK_THEME="Tokyonight-Light"
+    ICON_THEME="Papirus-Light"
+    KVANTUM_THEME="KvLibadwaita"
+    PREFER_DARK=0
+    COLOR_SCHEME="default"
+    ULAUNCHER_THEME="light"
+    ALACRITTY_THEME="$HOME/.config/alacritty/themes/catppuccin-latte.toml"
+fi
+
+echo "Switching to $MODE mode..."
+
+# Update GTK 3 settings
+if [ -f "$CONFIG_GTK3" ]; then
+    sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$GTK_THEME/" "$CONFIG_GTK3"
+    sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=$ICON_THEME/" "$CONFIG_GTK3"
+    sed -i "s/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=$PREFER_DARK/" "$CONFIG_GTK3"
+else
+    echo "Warning: $CONFIG_GTK3 not found."
+fi
+
+# Update GTK 4 settings
+if [ -f "$CONFIG_GTK4" ]; then
+    sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$GTK_THEME/" "$CONFIG_GTK4"
+    sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=$ICON_THEME/" "$CONFIG_GTK4"
+    sed -i "s/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=$PREFER_DARK/" "$CONFIG_GTK4"
+else
+    echo "Warning: $CONFIG_GTK4 not found."
+fi
+
+# Update Kvantum settings
+# Create file if it doesn't exist
+if [ ! -f "$CONFIG_KVANTUM" ]; then
+    mkdir -p "$(dirname "$CONFIG_KVANTUM")"
+    echo "[General]" > "$CONFIG_KVANTUM"
+    echo "theme=KvGnome" >> "$CONFIG_KVANTUM"
+fi
+
+sed -i "s/^theme=.*/theme=$KVANTUM_THEME/" "$CONFIG_KVANTUM"
+
+# Apply GSettings (for running GTK apps)
+gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME" 2>/dev/null
+gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME" 2>/dev/null
+gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME" 2>/dev/null
+
+echo "Theme switched to $GTK_THEME / $KVANTUM_THEME"
+
+# Update Ulauncher settings
+CONFIG_ULAUNCHER="$HOME/.config/ulauncher/settings.json"
+if [ -f "$CONFIG_ULAUNCHER" ]; then
+    sed -i "s/\"theme-name\": \".*\"/\"theme-name\": \"$ULAUNCHER_THEME\"/" "$CONFIG_ULAUNCHER"
+    echo "Ulauncher theme updated to $ULAUNCHER_THEME"
+else
+    echo "Warning: $CONFIG_ULAUNCHER not found."
+fi
+
+# Update Alacritty settings
+CONFIG_ALACRITTY="$HOME/.config/alacritty/alacritty.toml"
+if [ -f "$CONFIG_ALACRITTY" ]; then
+    # We use a different delimiter (|) for sed because path contains slashes
+    sed -i "s|^import = \[.*\]|import = [\"$ALACRITTY_THEME\"]|" "$CONFIG_ALACRITTY"
+    echo "Alacritty theme updated to $ALACRITTY_THEME"
+else
+    echo "Warning: $CONFIG_ALACRITTY not found."
+fi
