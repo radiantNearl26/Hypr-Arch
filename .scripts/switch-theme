@@ -20,7 +20,7 @@ if [ "$MODE" == "dark" ]; then
     PREFER_DARK=1
     COLOR_SCHEME="prefer-dark"
     ULAUNCHER_THEME="darkblue-ice"
-    ALACRITTY_THEME="$HOME/.cache/wal/colors-alacritty.toml"
+    WALLPAPER="$HOME/.walls/kawaii-anime/your-lie.jpg"
 else
     GTK_THEME="Tokyonight-Light"
     ICON_THEME="Papirus-Light"
@@ -28,10 +28,18 @@ else
     PREFER_DARK=0
     COLOR_SCHEME="default"
     ULAUNCHER_THEME="light"
-    ALACRITTY_THEME="$HOME/.config/alacritty/themes/catppuccin-latte.toml"
+    WALLPAPER="$HOME/.walls/radiant-light/win11-light.jpg"
 fi
 
 echo "Switching to $MODE mode..."
+
+# Update wallpaper
+if [[ "$MODE" == "light" ]]; then
+    waypaper --backend swww --wallpaper "$WALLPAPER" --fill fill --monitor All --no-post-command
+    wal -i "$WALLPAPER" -l
+elif [[ "$MODE" == "dark" ]]; then
+    waypaper --backend swww --wallpaper "$WALLPAPER" --fill fill --monitor All
+fi
 
 # Update GTK 3 settings
 if [ -f "$CONFIG_GTK3" ]; then
@@ -75,14 +83,4 @@ if [ -f "$CONFIG_ULAUNCHER" ]; then
     echo "Ulauncher theme updated to $ULAUNCHER_THEME"
 else
     echo "Warning: $CONFIG_ULAUNCHER not found."
-fi
-
-# Update Alacritty settings
-CONFIG_ALACRITTY="$HOME/.config/alacritty/alacritty.toml"
-if [ -f "$CONFIG_ALACRITTY" ]; then
-    # We use a different delimiter (|) for sed because path contains slashes
-    sed -i "s|^import = \[.*\]|import = [\"$ALACRITTY_THEME\"]|" "$CONFIG_ALACRITTY"
-    echo "Alacritty theme updated to $ALACRITTY_THEME"
-else
-    echo "Warning: $CONFIG_ALACRITTY not found."
 fi
