@@ -21,6 +21,7 @@ if [ "$MODE" == "dark" ]; then
     COLOR_SCHEME="prefer-dark"
     ULAUNCHER_THEME="darkblue-ice"
     WALLPAPER="$HOME/.walls/kawaii-anime/your-lie.jpg"
+    WAYBAR_STYLE=$HOME/.config/waybar/style-theme/style-dark.css
 else
     GTK_THEME="Tokyonight-Light"
     ICON_THEME="Papirus-Light"
@@ -28,18 +29,15 @@ else
     PREFER_DARK=0
     COLOR_SCHEME="default"
     ULAUNCHER_THEME="light"
-    WALLPAPER="$HOME/.walls/radiant-light/win11-light.jpg"
+    WALLPAPER="$HOME/.walls/kawaii-anime/1349150.jpg"
+    WAYBAR_STYLE=$HOME/.config/waybar/style-theme/style-light.css
 fi
 
 echo "Switching to $MODE mode..."
 
-# Update wallpaper
-if [[ "$MODE" == "light" ]]; then
-    waypaper --backend swww --wallpaper "$WALLPAPER" --fill fill --monitor All --no-post-command
-    wal -i "$WALLPAPER" -l
-elif [[ "$MODE" == "dark" ]]; then
-    waypaper --backend swww --wallpaper "$WALLPAPER" --fill fill --monitor All
-fi
+# Switch waybar stylesheet
+    cp "$WAYBAR_STYLE" "$HOME/.config/waybar/style.css"
+    echo "Swapped waybar stylesheet for $MODE mode."
 
 # Update GTK 3 settings
 if [ -f "$CONFIG_GTK3" ]; then
@@ -83,4 +81,12 @@ if [ -f "$CONFIG_ULAUNCHER" ]; then
     echo "Ulauncher theme updated to $ULAUNCHER_THEME"
 else
     echo "Warning: $CONFIG_ULAUNCHER not found."
+fi
+
+# Update wallpaper
+if [[ "$MODE" == "light" ]]; then
+    waypaper --backend swww --wallpaper "$WALLPAPER" --fill fill --monitor All --no-post-command
+    wal -i "$WALLPAPER" -l
+elif [[ "$MODE" == "dark" ]]; then
+    waypaper --backend swww --wallpaper "$WALLPAPER" --fill fill --monitor All
 fi
