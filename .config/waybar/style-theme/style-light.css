@@ -56,7 +56,8 @@ tooltip label {
 #custom-record,
 #custom-stop,
 #custom-section,
-#custom-theme {
+#custom-theme-light,
+#custom-theme-dark {
     padding: 1px 10px;
     margin: 8px 4px;
     background: alpha(@main-bg-color, 0.2);
@@ -70,6 +71,7 @@ tooltip label {
 #backlight {
     padding: 0px 5px 0px 5px;
     color: lighter(@main-color);
+    background: alpha(@main-color, 0);
 }
 
 #workspaces {
@@ -105,6 +107,7 @@ tooltip label {
 #tray {
     padding: 0px 2px 0px 2px;
     color: lighter(@main-color);
+    background: alpha(@main-color, 0);
 }
 
 #custom-arrow-left {
@@ -129,16 +132,16 @@ tooltip label {
     padding: 4px 6px 0px 0px;
     margin: 0px 2px 4px 4px;
     border-radius: 10px;
+    background: alpha(@main-color, 0);
     color: lighter(@main-color);
     font: bold 14px "JetBrainsMono Nerd Font Propo";
 }
 
 #power {
-    background: alpha(@main-color, 0);
     color: @main-color;
+    background: alpha(@main-color, 0);
     border-radius: 10px;
     margin: 4px 0px 0px 0px;
-
 }
 
 #power-profiles-daemon {
@@ -153,6 +156,7 @@ tooltip label {
     padding: 0px 8px;
     margin: 0px 2px 4px 2px;
     color: lighter(@main-color);
+    background: alpha(@main-color, 0);
 }
 
 
