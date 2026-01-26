@@ -1,6 +1,5 @@
 [general]
-import = ["~/.cache/wal/colors-alacritty.toml"]
-# import = ["~/.config/alacritty/themes/aura-dark.toml"]
+import = ["/home/Asmit/.cache/wal/colors-alacritty.toml"]
 
 [cursor.style]
 shape = "Block"

@@ -18,6 +18,8 @@
 .config/audacity/
 .config/chromium/
 .config/dconf/
+.config/Code
+.config/Code - OSS
 .config/Discord
 .config/dleyna-renderer-service.conf
 .config/eog/
@@ -47,6 +49,7 @@
 .config/rclone/
 .config/spicetify/
 .config/spotify/
+.config/Start-Page/
 .config/superfile/
 .config/touchegg/
 .config/user-share/
